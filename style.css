@@ -510,19 +510,26 @@ button:hover {
 }
 
 .menu-toggle {
-  display: none; /* masaüstünde gizle */
+  display: none;
   font-size: 24px;
   cursor: pointer;
+  position: relative; /* veya absolute header içinde */
+  z-index: 1000; /* üstte görünmesini sağlar */
 }
 
 @media screen and (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   nav {
     display: none;
   }
   nav.active {
+    display: block;
+  }
+  .menu-toggle {
     display: block;
   }
 }
