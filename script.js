@@ -27,3 +27,11 @@ setInterval(nextSlide, 5000);
 
 // İlk gösterim
 showSlide(currentIndex);
+
+// Menü toggle (mobil cihazlar için)
+const menuToggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector("nav");
+
+menuToggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
+});
