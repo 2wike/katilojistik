@@ -533,3 +533,59 @@ button:hover {
     display: block;
   }
 }
+
+/* Menü simgesi – desktop gizle */
+.menu-toggle {
+    display: none;
+    font-size: 28px; /* daha görünür */
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* Mobil için */
+@media screen and (max-width: 768px) {
+    /* Nav-container içinde logo ve menu simgesini yan yana hizala */
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block; /* Mobilde göster */
+    }
+
+    /* Nav başlangıçta gizli */
+    .nav-container nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* header altından açılır */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Menü açıkken nav göster */
+    .nav-container nav.active {
+        display: flex;
+    }
+
+    /* Nav linkleri mobilde dikey ve ortalı */
+    .nav-container nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Hover efekti */
+    .nav-container nav a:hover {
+        background-color: #f2f2f2;
+    }
+}
