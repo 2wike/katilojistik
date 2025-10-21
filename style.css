@@ -10,6 +10,7 @@ body {
   background: #fff;
   color: #333;
   line-height: 1.6;
+  font-size: 16px;
 }
 
 .container {
@@ -19,23 +20,24 @@ body {
 }
 
 /* Header & Navbar */
-
 header {
   background: #f8f9fa;
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
+  position: relative;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .logo {
   font-size: 28px;
   font-weight: 700;
-  color: #007bff; /* Mavi renk */
+  color: #007bff;
   cursor: default;
   user-select: none;
 }
@@ -57,8 +59,17 @@ nav ul li a:hover {
   color: #007bff;
 }
 
-/* Slider Bölümü */
+/* Hamburger Menü (Mobil) */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1000;
+}
 
+/* Slider, Hakkımızda, Teklif, Footer ve İletişim stili aynen korunur */
+
+/* Slider Bölümü */
 .slider-section {
   margin-top: 20px;
   margin-bottom: 80px;
@@ -103,7 +114,6 @@ nav ul li a:hover {
 }
 
 /* Slider Butonları */
-
 .prev,
 .next {
   position: absolute;
@@ -133,10 +143,8 @@ nav ul li a:hover {
 }
 
 /* Hakkımızda Bölümü */
-
 .about-section {
   margin: 40px 0;
-  margin-left: auto;
 }
 
 .about-container {
@@ -164,7 +172,6 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
-/* Eğer fotoğraf koyarsan */
 .about-image {
   width: 50%;
 }
@@ -175,22 +182,21 @@ nav ul li a:hover {
   border-radius: 4px;
 }
 
-/* teklif ver buton */
-
+/* Teklif Banner */
 .teklif-banner {
-  background-image: url("teklif-banner.jpg"); /* Kendi görsel yolunu yaz */
+  background-image: url("teklif-banner.jpg");
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
   position: relative;
   text-align: center;
   color: white;
-  margin-bottom: 60px; /* Alt boşluk, footer ile arayı açar */
+  margin-bottom: 60px;
   border-radius: 8px;
 }
 
 .teklif-banner .overlay {
-  background-color: rgba(0, 0, 0, 0.6); /* Yarı saydam koyu arka plan */
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 40px 30px;
   display: inline-block;
   border-radius: 8px;
@@ -210,7 +216,7 @@ nav ul li a:hover {
 }
 
 .btn-teklif {
-  background-color: #007bff; /* Mavi buton */
+  background-color: #007bff;
   color: #fff;
   padding: 14px 40px;
   font-weight: 700;
@@ -221,37 +227,10 @@ nav ul li a:hover {
 }
 
 .btn-teklif:hover {
-  background-color: #0056b3; /* Buton hover rengi */
-}
-
-/* Responsive */
-
-@media (max-width: 768px) {
-  .teklif-banner {
-    padding: 60px 15px;
-  }
-
-  .teklif-banner h2 {
-    font-size: 1.8rem;
-  }
-
-  .teklif-banner p {
-    font-size: 1rem;
-  }
-
-  .btn-teklif {
-    padding: 12px 30px;
-    font-size: 1rem;
-  }
-
-  .teklif-banner .overlay {
-    max-width: 90%;
-    padding: 30px 20px;
-  }
+  background-color: #0056b3;
 }
 
 /* Footer */
-
 footer {
   background: #233d89;
   padding: 30px 0;
@@ -307,56 +286,7 @@ footer {
   margin-bottom: 8px;
 }
 
-/* Responsive */
-
-@media (max-width: 768px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .about-container {
-    flex-direction: column;
-  }
-
-  .footer-container {
-    flex-direction: column;
-  }
-}
-
-/* Sadece teklifnavbar sınıfına özel stil */
-.nav-menu .teklifnavbar a {
-  background-color: #ff9900; /* Arkaplan rengi */
-  color: white; /* Yazı rengi */
-  padding: 10px 20px; /* İç boşluk */
-  border-radius: 6px; /* Köşe yumuşatma */
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.nav-menu .teklifnavbar a:hover {
-  background-color: #e68a00; /* Üzerine gelince rengi koyulaşır */
-}
-
-/* İletisim manüsü */
-
-/*
-.iletisim-wrapper {
-  max-width: 1000px;
-  margin: 60px auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-*/
-
+/* İletişim */
 .iletisim-wrapper {
   display: flex;
   flex-direction: column;
@@ -364,23 +294,10 @@ footer {
   padding: 60px 20px;
   gap: 40px;
   background-color: #f9f9f9;
-  max-width: 800px; /* sayfa ortasında sabit maksimum genişlik */
-  margin: 0 auto; /* otomatik yan boşluk, sayfayı ortaya alır */
-  box-sizing: border-box; /* padding ve border genişliği hesaba katılır */
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
-
-/*
-.iletisim-bilgileri {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  text-align: left;
-  margin-bottom: 40px;
-}
-  */
 
 .iletisim-bilgileri {
   max-width: 600px;
@@ -390,13 +307,6 @@ footer {
   line-height: 1.6;
 }
 
-/*
-.iletisim-bilgileri h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  color: #333;
-}
-*/
 .iletisim-bilgileri h2 {
   font-size: 28px;
   margin-bottom: 20px;
@@ -407,23 +317,10 @@ footer {
   font-size: 16px;
 }
 
-/*
 .iletisim-bilgileri a {
   color: #007bff;
   text-decoration: none;
 }
-*/
-
-.iletisim-bilgileri a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-/*
-.iletisim-bilgileri a:hover {
-  text-decoration: underline;
-}
-*/
 
 .iletisim-bilgileri a:hover {
   text-decoration: underline;
@@ -436,15 +333,6 @@ footer {
   height: 400px;
 }
 
-/* HARİTA İCİN STİL */
-
-/*
-.harita {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-*/
 .harita {
   width: 100%;
   max-width: 1200px;
@@ -453,139 +341,64 @@ footer {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Yeni Stiller Son **********************************************************************************/
-
-/* Genel body stili */
-body {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background-color: #fff;
-  margin: 0;
-  padding: 0;
-}
-
-/* Başlıklar */
-h1,
-h2,
-h3 {
-  color: #222;
-  margin-bottom: 10px;
-}
-
-/* Linkler */
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-
-/* Mobil cihazlar için örnek medya sorgusu */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-  nav {
-    display: block; /* Menü mobil uyumlu olacaksa */
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #0056b3;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
-  position: relative; /* veya absolute header içinde */
-  z-index: 1000; /* üstte görünmesini sağlar */
-}
-
+/* Yeni Mobil Menü ve Hamburger Ayarları */
 @media screen and (max-width: 768px) {
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
   }
-  nav {
-    display: none;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
   }
-  nav.active {
-    display: block;
-  }
+
   .menu-toggle {
     display: block;
-  }
-}
-
-/* Menü simgesi – desktop gizle */
-.menu-toggle {
-    display: none;
-    font-size: 28px; /* daha görünür */
+    font-size: 28px;
     cursor: pointer;
-    z-index: 1000;
-}
+  }
 
-/* Mobil için */
-@media screen and (max-width: 768px) {
-    /* Nav-container içinde logo ve menu simgesini yan yana hizala */
-    .nav-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        padding: 10px 20px;
-    }
+  /* Nav başlangıçta gizli */
+  .nav-container nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Header altından başlıyor */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
 
-    .menu-toggle {
-        display: block; /* Mobilde göster */
-    }
+  /* Menü açıkken göster */
+  .nav-container nav.active {
+    display: flex;
+  }
 
-    /* Nav başlangıçta gizli */
-    .nav-container nav {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* header altından açılır */
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 10px 0;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
+  /* Nav linkleri */
+  .nav-container nav ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
 
-    /* Menü açıkken nav göster */
-    .nav-container nav.active {
-        display: flex;
-    }
+  .nav-container nav a {
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    color: #333;
+  }
 
-    /* Nav linkleri mobilde dikey ve ortalı */
-    .nav-container nav a {
-        display: block;
-        padding: 10px;
-        text-align: center;
-        color: #333;
-        text-decoration: none;
-    }
-
-    /* Hover efekti */
-    .nav-container nav a:hover {
-        background-color: #f2f2f2;
-    }
+  .nav-container nav a:hover {
+    background-color: #f2f2f2;
+  }
 }
