@@ -21,10 +21,10 @@ body {
 
 /* Header & Navbar */
 header {
-  background: #f8f9fa;
   border-bottom: 1px solid #ddd;
   padding: 15px 0;
   position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
 }
 
 .nav-container {
@@ -32,14 +32,17 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  padding: 10px 10px;
 }
 
 .logo {
+  font-family: "Montserrat", sans-serif;
   font-size: 28px;
   font-weight: 700;
-  color: #007bff;
+  color: #228dff;
   cursor: default;
   user-select: none;
+  text-transform: uppercase;
 }
 
 nav ul {
@@ -400,5 +403,208 @@ footer {
 
   .nav-container nav a:hover {
     background-color: #f2f2f2;
+  }
+}
+
+/* Kurumsal Header */
+.kurumsal-header {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background-color: #f8f9fa;
+}
+
+.kurumsal-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.kurumsal-header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Misyon, Vizyon, Değerler */
+.kurumsal-content {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 40px 100px;
+  flex-wrap: wrap;
+}
+
+.kurumsal-block {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 380px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kurumsal-block h2 {
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.kurumsal-block p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* CTA Butonu */
+.kurumsal-contact {
+  text-align: center;
+  padding: 80px 20px 60px; /* üstten daha fazla boşluk */
+  background-color: #f2f2f2; /* hafif gri arka plan */
+}
+
+.kurumsal-contact p {
+  font-size: 1.5rem; /* Yazı boyutu */
+  font-weight: 700; /* Kalın */
+  color: #333; /* Yazı rengi */
+  margin: 0 0 15px 0; /* Alt boşluk ile buton arası mesafe */
+  text-align: center; /* Ortala */
+}
+
+.kurumsal-contact h2 {
+  font-size: 2rem;
+  margin-bottom: 25px; /* yazı ile buton arası boşluk */
+  color: #007bff;
+}
+
+.kurumsal-contact .btn-teklif {
+  display: inline-block;
+  margin-top: 15px; /* üstten küçük boşluk */
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  background-color: #ff9900;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.kurumsal-contact .btn-teklif:hover {
+  background-color: #e68a00;
+}
+
+/* Mobil için */
+@media screen and (max-width: 768px) {
+  .kurumsal-header h1 {
+    font-size: 2rem;
+  }
+  .kurumsal-header p {
+    font-size: 1rem;
+  }
+
+  .kurumsal-content {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .kurumsal-block {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  @media screen and (max-width: 768px) {
+    .kurumsal-contact {
+      padding: 60px 20px;
+    }
+
+    .kurumsal-contact h2 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .kurumsal-contact .btn-teklif {
+      width: 80%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+  }
+}
+.teklif-al {
+  background-color: #f8f9fa;
+  padding: 80px 20px;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background-color: #ff9900;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e68a00;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+
+  .form-container h1 {
+    font-size: 2rem;
   }
 }

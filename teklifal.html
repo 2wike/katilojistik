@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Katı Lojistik</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Teklif Al Formu için özel CSS -->
+    <style>
+      /* Form Container */
+      .teklif-form-wrapper {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 40px 20px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* Form Başlık */
+      .teklif-form-wrapper h2 {
+        text-align: center;
+        color: #007bff;
+        margin-bottom: 25px;
+        font-size: 2rem;
+      }
+
+      /* Input ve Textarea */
+      .teklif-form-wrapper input,
+      .teklif-form-wrapper textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border 0.3s;
+      }
+
+      .teklif-form-wrapper input:focus,
+      .teklif-form-wrapper textarea:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      /* Mesaj Kutusu yüksekliği */
+      .teklif-form-wrapper textarea {
+        min-height: 120px;
+        resize: vertical;
+      }
+
+      /* Gönder Butonu */
+      .teklif-form-wrapper .btn-submit {
+        background-color: #ff9900;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        padding: 14px 40px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .teklif-form-wrapper .btn-submit:hover {
+        background-color: #e68a00;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .teklif-form-wrapper {
+          padding: 30px 15px;
+        }
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -24,6 +98,55 @@
       </div>
     </header>
     <hr />
+    <section class="teklif-al">
+      <div class="form-container">
+        <h1>Teklif Al</h1>
+        <form action="https://formspree.io/f/xvgwjkyv" method="post">
+          <div class="form-group">
+            <label for="isim">İsim Soyisim</label>
+            <input
+              type="text"
+              id="isim"
+              name="isim"
+              placeholder="İsim ve Soyisim"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">E-posta</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="E-posta adresiniz"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="telefon">Telefon</label>
+            <input
+              type="tel"
+              id="telefon"
+              name="telefon"
+              placeholder="Telefon numaranız"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="mesaj">Mesajınız</label>
+            <textarea
+              id="mesaj"
+              name="mesaj"
+              rows="5"
+              placeholder="Mesajınızı yazın..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Gönder</button>
+        </form>
+      </div>
+    </section>
+
     <hr />
     <footer>
       <div class="container footer-container">
