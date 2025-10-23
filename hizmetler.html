@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Sayfa başlığı -->
+    <!-- Sayfa başlığı -->
     <title>Katil Lojistik | Taşımacılık ve Lojistik Hizmetleri</title>
     <link rel="icon" type="image/png" href="photos/katilojsitklogo2.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="hizmetler.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap"
       rel="stylesheet"
@@ -22,65 +23,118 @@
             <li><a href="index.html">AnaSayfa</a></li>
             <li><a href="kurumsal.html">Kurumsal</a></li>
             <li><a href="hizmetler.html">Hizmetler</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="iletisim.html">İletişim</a></li>
             <li class="teklifnavbar"><a href="teklifal.html">Teklif Al</a></li>
           </ul>
         </nav>
       </div>
     </header>
+    <section class="hizmetler-header">
+      <h1>Hizmetlerimiz</h1>
+      <p>
+        Katı Lojistik olarak taşımacılık ve depolama ihtiyaçlarınız için
+        profesyonel çözümler sunuyoruz.
+      </p>
+    </section>
 
-    <section id="anasayfa" class="slider-section">
-      <div class="slider">
-        <div class="slides">
-          <div class="slide active">
-            <img src="/photos/pexels-cottonbro-4820682.jpg" alt="Lojistik 1" />
-          </div>
-          <div class="slide">
-            <img
-              src="/photos/pexels-artempodrez-5025669.jpg"
-              alt="Lojistik 2"
-            />
-          </div>
-          <div class="slide">
-            <img
-              src="/photos/pexels-artempodrez-5025659.jpg"
-              alt="Lojistik 3"
-            />
-          </div>
-        </div>
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
+    <section class="hizmetler-content">
+      <div class="hizmet-card">
+        <img src="photos/p2.jpg" alt="Kara Taşımacılığı" />
+        <h2>Kara Taşımacılığı</h2>
+        <p>
+          İstanbul içi ve şehirler arası kara taşımacılığında güvenli, zamanında
+          ve planlı teslimat garantisi sunuyoruz.
+        </p>
+        <a href="teklifal.html" class="btn-hizmet">Teklif Al</a>
+      </div>
+
+      <div class="hizmet-card">
+        <img src="photos/p8.png" alt="Soğuk Taşımacılık" />
+        <h2>Soğuk Taşımacılık</h2>
+        <p>
+          +4 derecede kontrollü soğuk taşımacılık hizmetimizle taze ve güvenli
+          teslimatlar sağlıyoruz.
+        </p>
+        <a href="teklifal.html" class="btn-hizmet">Teklif Al</a>
+      </div>
+
+      <div class="hizmet-card">
+        <img src="photos/p3.jpg" alt="Limana Transfer" />
+        <h2>Limana Transfer</h2>
+        <p>
+          Liman transfer operasyonlarında hızlı, güvenilir ve entegre
+          taşımacılık çözümleri sunuyoruz.
+        </p>
+        <a href="teklifal.html" class="btn-hizmet">Teklif Al</a>
+      </div>
+
+      <div class="hizmet-card">
+        <img src="photos/p1.jpg" alt="Ürün Depolama" />
+        <h2>Ürün Depolama</h2>
+        <p>
+          İstanbul Anadolu Yakası’nda modern depolarımızda ürünlerinizi güvenli
+          şekilde muhafaza ediyoruz.
+        </p>
+        <a href="teklifal.html" class="btn-hizmet">Teklif Al</a>
       </div>
     </section>
-    <hr />
+
     <section id="kurumsal" class="about-section"></section>
     <hr />
     <footer>
-      <div class="container footer-container">
+      <div class="footer-container">
+        <!-- Menü bölümü -->
         <div class="footer-menu">
           <h3>Hızlı Menü</h3>
           <ul>
-            <li><a href="#hizmetler">Hizmetler</a></li>
-            <li><a href="#referanslar">Referanslar</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#teklif">Teklif Alma</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
-            <li><a href="#kvkk">KVKK Metni</a></li>
-            <li><a href="#kullanim">Kullanım Koşulları</a></li>
-            <li><a href="#gizlilik">Gizlilik Politikası</a></li>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="kurumsal.html">Kurumsal</a></li>
+            <li><a href="hizmetler.html">Hizmetler</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="teklifal.html">Teklif Al</a></li>
           </ul>
         </div>
+
+        <!-- İletişim Bilgileri -->
         <div class="footer-contact">
           <h3>İletişim</h3>
-          <p>Adres: Karlıktepe, Göl Sk. No:9, 34870 Kartal/İstanbul</p>
-          <p>Telefon: +90 542 293 53 28</p>
-          <p>E-posta: katilojistik@gmail.com</p>
+          <p>Katı Lojistik</p>
+          <p>Adres: İstanbul, Türkiye</p>
+          <p>Telefon: +90 555 555 55 55</p>
+          <p>Email: info@katilojistik.com</p>
         </div>
+
+        <!-- Sosyal Medya veya Ek Bilgi -->
+        <div class="footer-menu">
+          <h3>Sosyal Medya</h3>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Alt bilgi -->
+      <div
+        style="
+          text-align: center;
+          padding: 15px;
+          color: white;
+          background-color: #1c252f;
+          margin-top: 20px;
+        "
+      >
+        &copy; 2025 Katı Lojistik. Tüm hakları saklıdır.
       </div>
     </footer>
 
     <script src="script.js"></script>
   </body>
 </html>
-

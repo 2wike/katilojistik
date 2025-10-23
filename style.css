@@ -235,8 +235,8 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-  background: #233d89;
-  padding: 30px 0;
+  background: #233d89; /* İstersen burayı değiştirebilirsin */
+  padding: 30px 20px;
   border-top: 1px solid #b2b2b2;
   margin-top: 40px;
 }
@@ -245,24 +245,31 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 15px; /* Boşluğu optimize ettik */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.footer-menu {
-  flex: 1 1 300px;
+.footer-menu,
+.footer-contact {
+  flex: 1 1 250px; /* Eşit dağılım ve esneklik */
+  text-align: left;
 }
 
-.footer-menu h3 {
+.footer-menu h3,
+.footer-contact h3 {
   margin-bottom: 15px;
   color: #ffffff;
 }
 
 .footer-menu ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .footer-menu ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px; /* Küçük boşluk */
 }
 
 .footer-menu ul li a {
@@ -276,17 +283,115 @@ footer {
 }
 
 .footer-contact {
-  flex: 1 1 300px;
   color: #ffffff;
 }
 
+.footer-contact p,
+.footer-contact a {
+  margin: 5px 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-menu,
+  .footer-contact {
+    flex: 1 1 100%;
+    text-align: center; /* Mobilde ortala */
+  }
+
+  .footer-menu ul li,
+  .footer-contact p,
+  .footer-contact a {
+    margin-bottom: 8px;
+  }
+}
+/* Footer */
+footer {
+  background: #233d89; /* İstersen burayı değiştirebilirsin */
+  padding: 30px 20px;
+  border-top: 1px solid #b2b2b2;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px; /* Boşluğu optimize ettik */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-menu,
+.footer-contact {
+  flex: 1 1 250px; /* Eşit dağılım ve esneklik */
+  text-align: left;
+}
+
+.footer-menu h3,
 .footer-contact h3 {
   margin-bottom: 15px;
   color: #ffffff;
 }
 
-.footer-contact p {
-  margin-bottom: 8px;
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 8px; /* Küçük boşluk */
+}
+
+.footer-menu ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.footer-menu ul li a:hover {
+  color: #ff0000;
+}
+
+.footer-contact {
+  color: #ffffff;
+}
+
+.footer-contact p,
+.footer-contact a {
+  margin: 5px 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Mobil uyum */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-menu,
+  .footer-contact {
+    flex: 1 1 100%;
+    text-align: center; /* Mobilde ortala */
+  }
+
+  .footer-menu ul li,
+  .footer-contact p,
+  .footer-contact a {
+    margin-bottom: 8px;
+  }
 }
 
 /* İletişim */
@@ -606,5 +711,117 @@ button[type="submit"]:hover {
 
   .form-container h1 {
     font-size: 2rem;
+  }
+}
+
+/* Mobil düzen: Hakkımızda kısmında fotoğraf üstte, yazı altta */
+@media screen and (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Yatay yerine dikey diz */
+    align-items: center; /* Ortala */
+    text-align: center; /* Yazıyı ortala */
+    padding: 20px; /* İç boşluk */
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Köşeler yuvarlak kalabilir */
+    margin-bottom: 20px; /* Fotoğraf ile yazı arası boşluk */
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 600px; /* Yazının genişliği çok taşmasın */
+    font-size: 1rem; /* Mobilde okunabilir boyut */
+    line-height: 1.6; /* Satır arası boşluk */
+  }
+}
+
+footer {
+  background-color: #273442;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo img {
+  width: 150px;
+}
+
+.footer-contact p,
+.footer-social a {
+  margin: 5px 0;
+}
+
+.footer-social a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background-color 0.3s;
+}
+
+.footer-social a:hover {
+  background-color: #555;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Blokları dikey yap */
+    align-items: center; /* Ortala yatayda */
+    text-align: center; /* Metinleri ortala */
+    gap: 10px; /* Bloklar arası boşluk */
+  }
+
+  .footer-menu ul,
+  .footer-contact {
+    text-align: center; /* Metin ve linkleri ortala */
+  }
+
+  .footer-menu ul li,
+  .footer-contact p {
+    margin-bottom: 5px; /* Alt boşluk */
+  }
+}
+
+/* Mobilde logo ortalanacak */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    display: flex;
+    justify-content: center; /* logo ortalanacak */
+    align-items: center;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    position: absolute; /* logo ile üst üste binmeden sola veya sağa koyacağız */
+    left: 20px; /* menü sol tarafta */
+    display: block;
+  }
+
+  .logo {
+    position: relative; /* ortalanmasını sağlamak için */
+    z-index: 1;
   }
 }
