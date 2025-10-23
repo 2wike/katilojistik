@@ -190,7 +190,7 @@ nav ul li a:hover {
   background-image: url("teklif-banner.jpg");
   background-size: cover;
   background-position: center;
-  padding: 100px 20px;
+  padding: 50px 20px;
   position: relative;
   text-align: center;
   color: white;
@@ -825,3 +825,4 @@ footer {
     z-index: 1;
   }
 }
+
